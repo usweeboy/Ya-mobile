@@ -1,0 +1,238 @@
+.menu {
+  margin-right: 45px;
+  &__list {
+    @include align-center;
+    justify-content: center;
+    gap: 30px;
+  }
+  &__link {
+    font-weight: 500;
+    color: #c4c4c4;
+    @include align-center;
+    &-count {
+      background-color: var(--primary-color);
+      border-radius: 18px;
+      color: #344f01;
+      @include align-center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      height: 18px;
+      line-height: 13px;
+      margin-left: 10px;
+      width: 23px;
+    }
+    @include hover {
+      color: var(--primary-color);
+    }
+  }
+  &__bottom {
+    display: none;
+  }
+}
+
+@include desktop {
+  .menu {
+    margin-right: 30px;
+    &__list {
+      gap: 24px;
+    }
+    &__link {
+      font-size: 14px;
+      &-count {
+        font-size: 11px;
+        height: 16px;
+        line-height: 12px;
+        margin-left: 8px;
+        width: 21px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .menu {
+    position: absolute;
+    inset: 0;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 998;
+    width: 100%;
+    height: 100svh;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: opacity 0.4s;
+    display: flex;
+    justify-content: end;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      .menu__wrapper {
+        right: 0%;
+      }
+    }
+    &__wrapper {
+      position: relative;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      padding: 120px 25px 25px 25px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      background-color: var(--color-dark);
+      width: 300px;
+      overflow-y: auto;
+      height: 100%;
+      gap: 26px;
+      right: -100%;
+      transition: all 0.5s;
+      cursor: default;
+    }
+    &__list {
+      flex-direction: column;
+      align-items: start;
+      gap: 26px;
+      margin-bottom: 60px;
+    }
+    &__link {
+      font-size: 19px;
+      &-count {
+        font-size: 11px;
+        height: 20px;
+        line-height: 15px;
+        margin-left: 11px;
+        width: 24px;
+      }
+    }
+    &__bottom {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+    }
+    &__socials .socials {
+      &__list {
+        gap: 6px;
+      }
+      &__link {
+        height: 42px;
+        padding: 6px;
+        width: 42px;
+        & svg {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+    &__btn {
+      padding: 16px 44px;
+      font-size: 13px;
+      width: 100%;
+    }
+  }
+}
+
+@include phablet {
+  .menu {
+    &__wrapper {
+      padding: 110px 20px 20px 20px;
+      width: 280px;
+    }
+    &__list {
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+    &__link {
+      font-size: 18px;
+      &-count {
+        font-size: 10px;
+        height: 19px;
+        line-height: 14px;
+        margin-left: 10px;
+        width: 22px;
+      }
+    }
+    &__bottom {
+      gap: 18px;
+    }
+    &__btn {
+      padding: 15px 40px;
+      font-size: 12px;
+    }
+    &__socials .socials {
+      &__link {
+        height: 38px;
+        padding: 5px;
+        width: 38px;
+        & svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .menu {
+    &.active {
+      .menu__wrapper {
+        right: auto;
+      }
+    }
+    &__wrapper {
+      padding: 0px;
+      @include align-center;
+      justify-content: center;
+      width: 100%;
+      gap: 0;
+      inset: 0;
+    }
+    &__list {
+      gap: 24px;
+    }
+    &__link {
+      font-size: 20px;
+      &-count {
+        font-size: 11px;
+        height: 21px;
+        line-height: 15px;
+        margin-left: 11px;
+        width: 25px;
+      }
+    }
+    &__bottom {
+      gap: 24px;
+      padding: 20px;
+      justify-content: space-between;
+      flex-direction: row;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    &__btn {
+      width: 50%;
+    }
+  }
+}
+
+@include small-mobile {
+  .menu {
+    &__link {
+      font-size: 19px;
+      &-count {
+        font-size: 10px;
+        height: 20px;
+        line-height: 14px;
+        margin-left: 10px;
+        width: 24px;
+      }
+    }
+    &__bottom {
+      gap: 16px;
+      padding: 18px;
+    }
+    &__btn {
+      width: auto;
+    }
+  }
+}

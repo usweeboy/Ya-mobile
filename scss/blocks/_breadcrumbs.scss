@@ -1,0 +1,81 @@
+.breadcrumbs {
+  margin-bottom: 70px;
+  @include align-center;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  &__link {
+    display: block;
+    position: relative;
+    font-size: 15px;
+    color: var(--color-light);
+    &:hover {
+      text-decoration: underline;
+    }
+    &--current {
+      color: var(--color-gray);
+      cursor: default;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  & i {
+    background-image: url('../images/breadcrumbs-arrow.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@include desktop {
+  .breadcrumbs {
+    margin-bottom: 60px;
+    &__link {
+      font-size: 14px;
+    }
+    & i {
+      width: 13px;
+      height: 13px;
+    }
+  }
+}
+
+@include phablet {
+  .breadcrumbs {
+    margin-bottom: 50px;
+    gap: 4px 10px;
+    &__link {
+      font-size: 13px;
+    }
+    & i {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
+
+@include mobile {
+  .breadcrumbs {
+    margin-bottom: 42px;
+    gap: 4px 8px;
+    &__link {
+      font-size: 12px;
+    }
+  }
+}
+
+@include small-mobile {
+  .breadcrumbs {
+    margin-bottom: 38px;
+    gap: 3px 7px;
+    &__link {
+      font-size: 11px;
+    }
+    & i {
+      width: 11px;
+      height: 11px;
+    }
+  }
+}

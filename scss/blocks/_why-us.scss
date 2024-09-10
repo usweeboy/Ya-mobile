@@ -1,0 +1,180 @@
+.why-us {
+  background-color: var(--bg-gray);
+  color: var(--color-light);
+  padding: 70px 0px 100px;
+  &__title {
+    margin-bottom: 52px;
+    color: var(--color-light);
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  &__item {
+    border: 1px solid var(--color-gray);
+    border-radius: var(--border-radius);
+    padding: 31px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    &-icon {
+      border-radius: 50%;
+      background: var(--primary-color);
+      width: 88px;
+      height: 88px;
+      min-width: 88px;
+      margin-bottom: 24px;
+      @include align-center;
+      justify-content: center;
+    }
+    &-title {
+      font-weight: 600;
+      font-size: 26px;
+      margin-bottom: 16px;
+    }
+    &-text {
+      font-size: 18px;
+      line-height: 28px;
+      color: var(--color-gray);
+    }
+  }
+}
+
+@include desktop {
+  .why-us {
+    &__title {
+      margin-bottom: 45px;
+    }
+    &__list {
+      gap: 25px;
+    }
+    &__item {
+      padding: 30px 26px;
+      &-icon {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        margin-bottom: 20px;
+      }
+      &-title {
+        font-size: 22px;
+        margin-bottom: 12px;
+      }
+      &-text {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  } 
+}
+
+@include tablet {
+  .why-us {
+    padding: 60px 0px 90px;
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__item {
+      padding: 32px 26px;
+      &-top {
+        @include align-center;
+        gap: 18px;
+        margin-bottom: 22px;
+      }
+      &-icon {
+        margin-bottom: 0px;
+      }
+      &-title {
+        font-size: 22px;
+        margin-bottom: 0px;
+      }
+      &-text {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+@include phablet {
+  .why-us {
+    padding: 50px 0px 80px;
+    &__title {
+      margin-bottom: 38px;
+    }
+    &__list {
+      gap: 20px;
+    }
+    &__item {
+      padding: 28px 22px;
+      &-top {
+        gap: 14px;
+        margin-bottom: 16px;
+      }
+      &-icon {
+        width: 60px;
+        height: 60px;
+        min-width: 60px;
+        & svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+      &-title {
+        font-size: 18px;
+      }
+      &-text {
+        font-size: 15px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .why-us {
+    padding: 45px 0px 70px;
+    &__title {
+      margin-bottom: 30px;
+      &--hidden {
+        display: none;
+      }
+    }
+    &__list {
+      gap: 18px;
+    }
+    &__item {
+      padding: 24px 18px;
+      &-top {
+        gap: 13px;
+        margin-bottom: 15px;
+      }
+      &-icon {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        & svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      &-title {
+        font-size: 16px;
+      }
+      &-text {
+        font-size: 14px;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+@include small-mobile {
+  .why-us {
+    padding: 40px 0px 65px;
+    &__title {
+      margin-bottom: 25px;
+    }
+  }
+}

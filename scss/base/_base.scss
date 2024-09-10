@@ -1,0 +1,365 @@
+html, body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color);
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-light);
+}
+
+body.lock {
+  overflow: auto;
+  @include tablet {
+    overflow: hidden;
+  }
+}
+
+a,
+input,
+button,
+textarea * {
+  transition-duration: var(--transition-duration);
+}
+
+@include tablet {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0px auto;
+  padding: 0px 40px;
+  @include tablet {
+    padding: 0px 28px;
+  }
+  @include phablet {
+    padding: 0px 24px;
+  }
+  @include mobile {
+    padding: 0px 20px;
+  }
+  @include small-mobile {
+    padding: 0px 18px;
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  & a {
+    font-size: 30px;
+    color: var(--color-light);
+    font-weight: 700;
+  }
+  & span {
+    font-size: 13px;
+    color: var(--color-gray);
+    line-height: 19px;
+    font-weight: 500;
+  }
+  @include desktop {
+    gap: 3px;
+    & a {
+      font-size: 26px;
+    }
+    & span {
+      font-size: 11px;
+      line-height: 17px;
+    }
+  }
+  @include tablet {
+    & a {
+      font-size: 24px;
+    }
+    & span {
+      font-size: 10px;
+      line-height: 17px;
+    }
+  }
+  @include phablet {
+    gap: 2px;
+    & a {
+      font-size: 22px;
+    }
+    & span {
+      font-size: 9px;
+      line-height: 16px;
+    }
+  }
+  @include mobile {
+    & a {
+      font-size: 20px;
+    }
+  }
+}
+
+.socials {
+  &__list {
+    @include align-center;
+    gap: 9px;
+  }
+  &__link {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    height: 50px;
+    padding: 8px;
+    @include align-center;
+    justify-content: center;
+    transition: var(--transition-duration);
+    width: 50px;
+    color: var(--color-gray-alt);
+    @include hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+  @include desktop {
+    &__list {
+      gap: 6px;
+    }
+    &__link {
+      height: 42px;
+      padding: 6px;
+      width: 42px;
+      & svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+  @include tablet {
+    &__link {
+      height: 38px;
+      padding: 5px;
+      width: 38px;
+      & svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+  @include phablet {
+    &-list {
+      gap: 5px;
+    }
+    &-link {
+      height: 36px;
+      padding: 5px;
+      width: 36px;
+      & svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+}
+
+.section-title {
+  color: #4c424a;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 54px;
+  @include desktop {
+    font-size: 34px;
+    line-height: 48px;
+  }
+  @include tablet {
+    font-size: 28px;
+    line-height: 44px;
+    text-align: center;
+  }
+  @include phablet {
+    font-size: 25px;
+    line-height: 38px;
+  }  
+  @include mobile {
+    font-size: 23px;
+    line-height: 36px;
+  }
+  @include small-mobile {
+    font-size: 22px;
+    line-height: 35px;
+  }
+}
+
+.section-subtitle {
+  font-size: 21px;
+  line-height: 36px;
+  font-weight: 500;
+  color: var(--color-gray);
+  @include desktop {
+    font-size: 20px;
+    line-height: 34px;
+  }
+  @include tablet {
+    font-size: 17px;
+    line-height: 31px;
+    text-align: center;
+  }
+  @include tablet {
+    font-size: 17px;
+    line-height: 31px;
+    text-align: center;
+  }
+  @include phablet {
+    font-size: 15px;
+    line-height: 29px;
+  }
+  @include mobile {
+    font-size: 14px;
+    line-height: 27px;
+  }
+  @include small-mobile {
+    font-size: 13px;
+    line-height: 25px;
+  }
+}
+
+.section-offset {
+  padding: 72px 0px 115px;
+  @include desktop {
+    padding: 68px 0px 90px;
+  }
+  @include tablet {
+    padding: 58px 0px 88px;
+  }
+  @include phablet {
+    padding: 50px 0px 74px;
+  }
+  @include mobile {
+    padding: 45px 0px 62px;
+  }
+  @include small-mobile {
+    padding: 40px 0px 60px;
+  }
+}
+
+.primary-btn {
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--color-light);
+  padding: 22px 64px;
+  font-size: 16px;
+  font-weight: 500;
+  @include hover {
+    background-color: var(--primary-color-alt);
+  }
+  @include desktop {
+    padding: 20px 56px;
+    font-size: 15px;
+  }
+  @include tablet {
+    padding: 18px 52px;
+    font-size: 14px;
+  }
+  @include phablet {
+    padding: 17px 48px;
+    font-size: 13px;
+  }
+  @include phablet {
+    padding: 16px 44px;
+    font-size: 12px;
+  }
+}
+
+.primary-input {
+  border: 1px solid var(--color-gray);
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 24px;
+  font-size: 16px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--border-radius);
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--color-gray-alt);
+  }
+  @include tablet {
+    padding: 22px;
+    font-size: 15px;
+  }
+  @include phablet {
+    padding: 20px;
+    font-size: 14px;
+  }
+  @include mobile {
+    padding: 18px;
+    font-size: 13px;
+  }
+}
+
+.scroll-to-top {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  bottom: 80px;
+  right: 45px;
+  border: 1px solid #565656;
+  border-radius: 67px;
+  color: #565656;
+  z-index: 9;
+  cursor: pointer;
+  background-color: var(--color-light);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .18);
+  transition: var(--transition-duration);
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  &__btn {
+    width: 50px;
+    height: 70px;
+    @include align-center;
+    justify-content: center;
+  }
+  @include desktop {
+    bottom: 70px;
+    right: 40px;
+    &__btn {
+      width: 45px;
+      height: 65px;
+      & svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+  @include tablet {
+    bottom: 60px;
+    right: 35px;
+    &__btn {
+      width: 40px;
+      height: 60px;
+      & svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+  @include mobile {
+    bottom: 50px;
+    right: 30px;
+    &__btn {
+      width: 38px;
+      height: 56px;
+      & svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

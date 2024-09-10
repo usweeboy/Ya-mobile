@@ -1,0 +1,229 @@
+.header {
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 49;
+  width: 100%;
+  padding: 20px 0px;
+  transition: all var(--transition-duration);
+  &__inner {
+    @include align-center;
+    justify-content: space-between;
+  }
+  &__info {
+    @include align-center;
+    gap: 30px;
+  }
+  &__phone {
+    @include align-center;
+    flex-direction: column;
+    color: var(--color-gray-alt);
+    text-align: center;
+    gap: 4px;
+    &-number {
+      font-size: 17px;
+      color: var(--color-gray-alt);
+      font-weight: 600;
+    }
+    &-order__call {
+      font-size: 16px;
+      color: var(--color-gray);
+      border-bottom: 1px dashed var(--color-gray);
+      &:hover {
+        color: var(--color-light-alt);
+        border-bottom: 1px dashed var(--color-gray-alt);
+      }
+    }
+  }
+  &__callback {
+    display: none
+  }
+  &-sticky {
+    position: fixed;
+    background-color: var(--color-dark);
+    transition: all var(--transition-duration);
+    padding: 18px 0px;
+    animation: animation-show 0.4s;
+  }
+  &-sticky &__logo {
+    & a {
+      font-size: 28px;
+    }
+    & span {
+      display: none;
+    }
+  }
+}
+
+@keyframes animation-show {
+  from {
+    top: -80px;
+  } 
+  to {
+    top: 0;
+  }
+}
+
+@include desktop {
+  .header {
+    &__info {
+      gap: 28px;
+    }
+    &__phone {
+      gap: 3px;
+      &-number {
+        font-size: 15px;
+      }
+      &-order__call {
+        font-size: 14px;
+      }
+    }
+    &-sticky &__logo {
+      & a {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .header {
+    &__logo {
+      @include align-center;
+      flex-direction: row;
+      gap: 14px;
+    }
+    &__info {
+      gap: 22px;
+    }
+    &__phone {
+      gap: 2px;
+      &-number {
+        font-size: 14px;
+      }
+      &-order__call {
+        font-size: 13px;
+      }
+    }
+    &-sticky {
+      padding: 16px 0px;
+    }
+    &-sticky &__logo {
+      & a {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@include phablet {
+  .header {
+    &__logo {
+      & span {
+        display: none;
+      }
+    }
+    &__info {
+      gap: 20px;
+    }
+    &__phone {
+      gap: 2px;
+      &-number {
+        font-size: 13px;
+      }
+      &-order__call {
+        font-size: 12px;
+      }
+    }
+    &-sticky {
+      padding: 15px 0px;
+    }
+    &-sticky &__logo {
+      & a {
+        font-size: 21px;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .header {
+    padding: 18px 0px;
+    &__logo {
+      z-index: 999;
+    }
+    &__socials {
+      display: none;
+    }
+    &__info {
+      gap: 24px;
+    }
+    &__phone {
+      gap: 2px;
+      &-number {
+        font-size: 12px;
+      }
+      &-order__call {
+        font-size: 11px;
+      }
+    }
+    &-sticky {
+      padding: 14px 0px;
+    }
+    &-sticky &__logo {
+      & a {
+        font-size: 19px;
+      }
+    }
+  }
+  @keyframes animation-show {
+    from {
+      top: -50px;
+    } 
+    to {
+      top: 0;
+    }
+  }
+}
+
+@include small-mobile {
+  .header {
+    padding: 15px 0px;
+    &__phone {
+      display: none;
+    }
+    &__info {
+      gap: 16px;
+    }
+    &__callback {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      height: 40px;
+      padding: 6px;
+      @include align-center;
+      justify-content: center;
+      transition: var(--transition-duration);
+      width: 40px;
+      color: var(--color-gray-alt);
+      z-index: 999;
+    }
+    &-sticky {
+      padding: 11px 0px;
+    }
+    &-sticky &__logo {
+      & a {
+        font-size: 18px;
+      }
+    }
+    &-sticky &__callback {
+      background-color: rgba(255, 255, 255, 0.15);
+      width: 36px;
+      height: 36px;
+      & svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

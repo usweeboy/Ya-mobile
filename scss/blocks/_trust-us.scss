@@ -1,0 +1,148 @@
+.trust-us {
+  &__title {
+    margin-bottom: 32px;
+  }
+  &__subtitle {
+    margin-bottom: 80px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  &__item {
+    filter: grayscale(1);
+    @include align-center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: default;
+    min-height: 210px;
+    border-left: 1px solid var(--color-gray-alt);
+    border-right: 1px solid var(--color-gray-alt);
+    transition: var(--transition-duration);
+    &-image {
+      max-width: 200px;
+      width: 105px;
+      max-height: 90px;
+      opacity: 0.7;
+    }
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+
+@include desktop {
+  .trust-us {
+    &__title {
+      margin-bottom: 26px;
+    }
+    &__subtitle {
+      margin-bottom: 68px;
+    }
+    &__item {
+      min-height: 190px;
+      &-image {
+        max-width: 180px;
+        width: 90px;
+        max-height: 80px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .trust-us {
+    &__title {
+      margin-bottom: 14px;
+    }
+    &__subtitle {
+      max-width: 840px;
+      margin: 0px auto;
+      margin-bottom: 60px;
+    }
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    &__item {
+      min-height: 180px;
+      &-image {
+        max-width: 160px;
+        width: 80px;
+        max-height: 70px;
+      }
+    }
+  }
+}
+
+@include phablet {
+  .trust-us {
+    &__title {
+      margin-bottom: 12px;
+    }
+    &__subtitle {
+      max-width: 100%;
+      margin-bottom: 48px;
+    }
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__item {
+      min-height: 160px;
+      &-image {
+        max-width: 160px;
+        width: 80px;
+        max-height: 70px;
+      }
+    }
+  }
+}
+
+
+@include mobile {
+  .trust-us {
+    padding-bottom: 56px;
+    &__title {
+      margin-bottom: 10px;
+    }
+    &__subtitle {
+      margin-bottom: 42px;
+    }
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__item {
+      min-height: 140px;
+      &-image {
+        max-width: 140px;
+        width: 60px;
+        max-height: 50px;
+      }
+    }
+  }
+}
+
+@include small-mobile {
+  .trust-us {
+    padding-bottom: 52px;
+    &__title {
+      margin-bottom: 36px;
+    }
+    &__subtitle {
+      display: none;
+    }
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__item {
+      min-height: 120px;
+      &-image {
+        max-width: 140px;
+        width: 60px;
+        max-height: 50px;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}

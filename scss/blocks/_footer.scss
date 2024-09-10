@@ -1,0 +1,302 @@
+.footer {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    padding: 60px 0px;
+  }
+  &__menu {
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 22px;
+    }
+  }
+  &__link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__phone {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    margin-bottom: 14px;
+  }
+  &__work-time {
+    color: var(--color-gray);
+    margin-bottom: 14px;
+  }
+  &__mail {
+    margin-bottom: 20px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    &-label {
+      font-size: 14px;
+      color: var(--color-gray);
+      margin-bottom: 10px;
+    }
+    &-input {
+      padding: 18px;
+      font-size: 14px;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    &-btn {
+      width: 100%;
+      padding: 18px;
+      font-size: 14px;
+    }
+  }
+  &__copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 32px 0px;
+    color: var(--color-gray);
+    text-align: center;
+    & span {
+      color: var(--color-light);
+    }
+  }
+}
+
+@include desktop {
+  .footer {
+    &__phone {
+      font-size: 22px;
+      line-height: 27px;
+      margin-bottom: 12px;
+    }
+    &__body {
+      gap: 12px;
+    }
+    &__form {
+      padding-left: 20px;
+      &-label {
+        font-size: 13px;
+        margin-bottom: 9px;
+      }
+      &-input {
+        padding: 17px;
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+      &-btn {
+        padding: 17px;
+        font-size: 13px;
+      }
+    }
+    &__copyright {
+      padding: 28px 0px;
+      font-size: 14px;
+    }
+  }
+}
+
+@include tablet {
+  .footer {
+    &__body {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 45px 0px 50px;
+      gap: 50px 40px;
+    }
+    &__menu {
+      &-link {
+        font-size: 14px;
+        &__count {
+          font-size: 11px;
+          height: 16px;
+          line-height: 12px;
+          margin-left: 8px;
+          width: 21px;
+        }
+      }
+    }
+    &__phone {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 10px;
+    }
+    &__work-time {
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    &__mail {
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    &__form {
+      padding-left: 0px;
+    }
+  }
+}
+
+@include phablet {
+  .footer {
+    &__body {
+      gap: 45px 30px;
+      padding: 40px 0px 38px;
+    }
+    &__phone {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 8px;
+    }
+    &__menu {
+      &-list {
+        gap: 18px;
+      }
+      &-link {
+        font-size: 13px;
+        &__count {
+          font-size: 10px;
+          height: 15px;
+          margin-left: 7px;
+          width: 19px;
+        }
+      }
+    }
+    &__work-time {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    &__mail {
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+    &__form {
+      &-label {
+        font-size: 11px;
+        margin-bottom: 7px;
+      }
+      &-input {
+        padding: 15px;
+        font-size: 12px;
+        margin-bottom: 11px;
+      }
+      &-btn {
+        padding: 15px;
+        font-size: 12px;
+      }
+    }
+    &__copyright {
+      padding: 24px 0px;
+      font-size: 12px;
+    }
+  }
+}
+
+@include mobile {
+  .footer {
+    &__body {
+      gap: 35px 25px;
+      padding: 30px 0px 36px;
+    }
+    &__phone {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 6px;
+    }
+    &__menu {
+      &-list {
+        gap: 16px;
+      }
+    }
+    &__work-time {
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    &__mail {
+      margin-bottom: 12px;
+      font-size: 12px;
+    }
+    &__form {
+      &-label {
+        font-size: 10px;
+        margin-bottom: 7px;
+      }
+      &-input {
+        padding: 14px;
+        font-size: 11px;
+        margin-bottom: 10px;
+      }
+      &-btn {
+        padding: 14px;
+        font-size: 11px;
+      }
+    }
+    &__copyright {
+      padding: 22px 0px;
+      font-size: 11px;
+    }
+  }
+}
+
+@include small-mobile {
+  .footer {
+    &__body {
+      gap: 28px;
+      padding: 32px 0px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__logo {
+      gap: 4px;
+      & a {
+        font-size: 23px;
+      }
+      & span {
+        font-size: 11px;
+      }
+    }
+    &__phone {
+      font-size: 19px;
+      line-height: 25px;
+      margin-bottom: 9px;
+    }
+    &__menu {
+      &-list {
+        gap: 18px;
+      }
+      &-link {
+        font-size: 14px;
+        &__count {
+          font-size: 11px;
+          height: 18px;
+          margin-left: 8px;
+          width: 21px;
+        }
+      }
+    }
+    &__work-time {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    &__mail {
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+    &__form {
+      &-label {
+        font-size: 11px;
+        margin-bottom: 8px;
+      }
+      &-input {
+        padding: 16px;
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
+      &-btn {
+        padding: 16px;
+        font-size: 12px;
+      }
+    }
+    &__copyright {
+      padding: 21px 0px;
+    }
+  }
+}

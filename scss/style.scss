@@ -1,0 +1,30 @@
+// Base
+@import 
+  './base/reset',
+  './base/fonts',
+  './base/vars',
+  './base/media',
+  './base/mixins',
+  './base/base'
+;
+
+// Blocks
+@import 
+  './blocks/header',
+  './blocks/header-burger',
+  './blocks/menu',
+  './blocks/breadcrumbs',
+  './blocks/hero-main',
+  './blocks/hero',
+  './blocks/statistics',
+  './blocks/why-us',
+  './blocks/trust-us',
+  './blocks/vacancies',
+  './blocks/contacts',
+  './blocks/project-discussion',
+  './blocks/reasons',
+  './blocks/approach',
+  './blocks/comfortable-conditions',
+  './blocks/vacancy-about',
+  './blocks/footer'
+;

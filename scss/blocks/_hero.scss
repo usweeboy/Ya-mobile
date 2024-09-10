@@ -1,0 +1,197 @@
+.hero {
+  position: relative;
+  background: #03300e;
+  background: var(--bg-gradient); 
+  color: var(--color-light);
+  padding: 195px 0px 105px;
+  &__title {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+  &__subtitle {
+    font-size: 26px;
+    font-weight: 300;
+    color: var(--color-gray-alt);
+    line-height: 40px;
+    max-width: 800px;
+    & b {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 16px;
+      color: var(--color-light);
+    }
+  }
+  &__cities {
+    margin-top: 50px;
+    &-list {
+      @include align-center;
+      flex-wrap: wrap;
+      gap: 10px 0px;
+    }
+    &-item {
+      color: var(--color-gray);
+      position: relative;
+      font-size: 18px;
+      &:not(:last-child) {
+        margin-right: 40px;
+        &::after {
+          content: '|';
+          position: absolute;
+          font-size: 18px;
+          color: var(--color-gray);
+          top: 0px;
+          right: -22px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .hero {
+    padding: 188px 0px 85px;
+    &__title {
+      font-size: 48px;
+      margin-bottom: 28px;
+    }
+    &__subtitle {
+      font-size: 24px;
+      line-height: 36px;
+      max-width: 720px;
+    }
+    &__cities {
+      margin-top: 44px;
+      &-item {
+        font-size: 17px;
+        &:not(:last-child) {
+          margin-right: 36px;
+          &::after {
+            font-size: 17px;
+            right: -20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .hero {
+    padding: 165px 0px 75px;
+    &__title {
+      font-size: 42px;
+      margin-bottom: 24px;
+    }
+    &__subtitle {
+      font-size: 20px;
+      line-height: 32px;
+      max-width: 600px;
+    }
+    &__cities {
+      margin-top: 36px;
+      &-item {
+        font-size: 16px;
+        &:not(:last-child) {
+          margin-right: 28px;
+          &::after {
+            font-size: 16px;
+            right: -16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include phablet {
+  .hero {
+    padding: 140px 0px 65px;
+    &__title {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      font-size: 18px;
+      line-height: 30px;
+      max-width: 540px;
+    }
+    &__cities {
+      margin-top: 34px;
+      &-item {
+        font-size: 15px;
+        &:not(:last-child) {
+          margin-right: 26px;
+          &::after {
+            font-size: 15px;
+            right: -15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .hero {
+    padding: 120px 0px 58px;
+    &__title {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 28px;
+      max-width: 480px;
+      & b {
+        margin-bottom: 12px;
+      }
+    }
+    &__cities {
+      margin-top: 28px;
+      &-item {
+        font-size: 13px;
+        &:not(:last-child) {
+          margin-right: 21px;
+          &::after {
+            font-size: 13px;
+            right: -12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include small-mobile {
+  .hero {
+    padding: 115px 0px 52px;
+    &__title {
+      font-size: 27px;
+      margin-bottom: 18px;
+    }
+    &__subtitle {
+      line-height: 26px;
+      max-width: 100%;
+      & b {
+        margin-bottom: 10px;
+      }
+    }
+    &__cities {
+      margin-top: 24px;
+      &-item {
+        font-size: 12px;
+        &:not(:last-child) {
+          margin-right: 19px;
+          &::after {
+            font-size: 12px;
+            right: -10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
